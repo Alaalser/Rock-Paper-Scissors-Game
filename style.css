@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 body{
-  border: 10px solid;
-  height: auto;
+  border: 5px solid darkgreen;
   width: 500px;
+  height: 100vh, auto,;
   margin:auto;
-  padding:0;
+  padding:auto;
   font-family: 'Lato', sans-serif;
   text-align: center;
   font-size: 1.2rem;
   background-image: linear-gradient(to right bottom, #89a8d6, #70c6e3, #7cdfda, #b2f3c4, #f8ffb8);
-  background-repeat: no-repeat;
 }
 
 header{
   background-color: rgb(201, 170, 196);
-  padding: 10px;
+  padding: 4px;
   margin: auto;
 }
 #rock{
@@ -50,18 +49,34 @@ header{
 
 .select-choice{
   display: flex;
-  flex-direction: row;
   padding:20px;
 }
 
-#rock:hover, #paper:hover, #scissors:hover{
-  background-color: #a6a6a6;
+#rock:hover, #paper:hover, #scissors:hover, #reset-button:hover{
+  background-color: #a38f8f;
   cursor: pointer;
   
 }
 
 .scores{
   font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.total-score1 {
+background-color: rgb(118, 169, 226);
+flex-direction: column;
+position: absolute;
+left: 40px;
+}
+
+.total-score2 {
+  background-color: rgb(118, 169, 226);
+  flex-direction: column;
+  position: absolute;
+  right: 5px;
 }
 
 #reset-button{
@@ -69,7 +84,15 @@ header{
   box-shadow: 5px 7px 8px #888888;
   width: 10vw;
   padding: 5px 30px;
-  margin :5px;
+  margin :10px;
   font-size: 1em;
+  
+}
+
+.style {
+  font-weight: bold;
+  background-color: rgb(180, 156, 172);
+  display: inline-block;
+  padding: 4px;
 
 }
