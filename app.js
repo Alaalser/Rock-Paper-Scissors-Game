@@ -23,9 +23,17 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
   computerScoreSpan.innerHTML= computerScore
 }));
 
+const resetScores = () => {
+  computerScore = 0;
+  computerScoreSpan.innerHTML = computerScore
+  userScore = 0;
+  userScoreSpan.innerHTML = userScore;
+};
+
 const rest = () => {
 resetButton.addEventListener('click', () => resetScores());
 };
+
 rest();
 
 
@@ -39,39 +47,33 @@ function results() {
   if (computerChosen == userChosen) {
     return result = 'It is a tie 🙈 '
   } else if (computerChosen === 'rock' && userChosen === 'paper') {
-    return result = 'You win! 💃'
+    return result = 'You win! 💃', computerChosen = "Rock" , userChosen = "Paper"
   } else if (computerChosen === 'rock' && userChosen === 'scissors') {
-    return result = 'You lost 😥'
+    return result = 'You lost 😥', computerChosen = "Rock" , userChosen = "Scissors"
   } else if (computerChosen === 'paper' && userChosen === 'rock') {
-    return result = 'You lost 🤦'
+    return result = 'You lost 🤦', computerChosen = "Paper" , userChosen = "Rock"
   } else if (computerChosen === 'paper' && userChosen === 'scissors') {
-    return result = 'You win! 💃'
+    return result = 'You win! 💃', computerChosen = "Paper" , userChosen = "Scissors"
   } else if (computerChosen === 'scissors' && userChosen === 'rock') {
-    return result = 'You win! 😎'
+    return result = 'You win! 😎', computerChosen = "Scissors" , userChosen = "Rock"
   } else if (computerChosen === 'scissors' && userChosen === 'paper') {
-    return result = 'You lost 😡'
+    return result = 'You lost 😥', computerChosen = "Scissors" , userChosen = "Paper"
   }
 }
 
 function score() {
-  if (computerChosen === 'rock' && userChosen === 'paper') {
+  if (computerChosen === 'Rock' && userChosen === 'Paper') {
     return  userScore++
-  } else if (computerChosen === 'rock' && userChosen === 'scissors') {
+  } else if (computerChosen === 'Rock' && userChosen === 'Scissors') {
     return  computerScore++
-  } else if (computerChosen === 'paper' && userChosen === 'rock') {
+  } else if (computerChosen === 'Paper' && userChosen === 'Rock') {
     return  computerScore++
-  } else if (computerChosen === 'paper' && userChosen === 'scissors') {
+  } else if (computerChosen === 'Paper' && userChosen === 'Scissors') {
     return  userScore++
-  } else if (computerChosen === 'scissors' && userChosen === 'rock') {
+  } else if (computerChosen === 'Scissors' && userChosen === 'Rock') {
     return  userScore++
-  } else if (computerChosen === 'scissors' && userChosen === 'paper') {
+  } else if (computerChosen === 'Scissors' && userChosen === 'Paper') {
     return  computerScore++
   }
 }
 
-const resetScores = () => {
-  computerScore = 0;
-  computerScoreSpan.innerHTML = computerScore
-  userScore = 0;
-  userScoreSpan.innerHTML = userScore;
-};
